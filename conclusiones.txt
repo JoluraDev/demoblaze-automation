@@ -1,0 +1,41 @@
+
+INFORME DE HALLAZGOS Y CONCLUSIONES DEL EJERCICIO
+
+
+----------- 1. ARQUITECTURA Y PATRÓN DE DISEÑO IMPLEMENTADO -----------
+
+- Se implementó el patrón de diseño Screenplay sobre Serenity BDD.
+- La suite de pruebas genera automáticamente un reporte visual detallado
+  con evidencias fotográficas paso a paso, reduciendo el esfuerzo manual
+  de documentación de pruebas.
+
+
+---------- 2. HALLAZGOS TÉCNICOS EN EL SITIO BAJO PRUEBA (DEMOBLAZE) --
+
+Durante el análisis y automatización del flujo de compra sobre la plataforma
+Demoblaze, se identificaron los siguientes aspectos técnicos relevantes:
+
+* Manejo de Alertas Nativas de JavaScript:
+   Al agregar un producto al carrito, la aplicación dispara un pop-up nativo
+   del navegador (JavaScript Alert: "Product added."), fue necesario implementar 
+   una espera explícita y confirmación del diálogo antes de continuar con la navegación.
+
+* Selectores Flexibles y Dinámicos:
+   Se parametrizó la localización de elementos en el catálogo mediante XPath
+   dinámico con la sintaxis de Target.of("{0}"), lo que permite reutilizar
+   el mismo localizador para adquirir cualquier producto disponible en la tienda
+   únicamente cambiando el dato de entrada en el archivo Feature.
+
+
+---------- 3. CONCLUSIONES Y PROPUESTAS DE MEJORA CONTINUA ----------
+
+- Cobertura de Pruebas: El ejercicio cubrió exitosamente el "Happy Path" del
+  flujo de compra E2E. Se recomiendan escenarios futuros para
+  * Validaciones de formularios vacíos o incompletos en el modal de compra.
+  * Validación de eliminación de productos dentro de la tabla del carrito.
+  * Pruebas de borde en el campo de tarjeta de crédito (longitud y formato).
+
+- Integración Continua (CI/CD): El proyecto queda estructurado mediante Gradle
+  Wrapper, lo que permite su ejecución desacoplada de entornos locales y su
+  fácil incorporación a pipelines automatizados (ej. GitHub Actions, Jenkins)
+  mediante el comando headless: ./gradlew test aggregate.

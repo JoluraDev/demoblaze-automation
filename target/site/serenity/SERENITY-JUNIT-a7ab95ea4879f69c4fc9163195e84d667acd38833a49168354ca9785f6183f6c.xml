@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Combra de productos en Demoblaze" skipped="0" tests="1" time="10.43" timestamp="2026-10-07 08:26:39"><testcase name="Compra exitosa de un celular"><failure message="Expected: Titulo de confirmacion with text value that contains (ignoring case): &lt;[Gracias por su compra]&gt;&#10;Actual:   &lt;&quot;Thank you for your purchase!&quot;&gt;" type="java.lang.AssertionError">Expected: Titulo de confirmacion with text value that contains (ignoring case): &lt;[Gracias por su compra]&gt;
+Actual:   &lt;"Thank you for your purchase!"&gt;</failure><system-err>Expected: Titulo de confirmacion with text value that contains (ignoring case): &lt;[Gracias por su compra]&gt;
+Actual:   &lt;"Thank you for your purchase!"&gt;&#13;
+com.demoblaze.stepdefinitions.PurchaseStepDefinitions.deberiaVerElMensajeDeConfirmacion(PurchaseStepDefinitions.java:67)&#13;
+org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:596)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:824)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:494)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:225)&#13;
+</system-err></testcase></testsuite>
